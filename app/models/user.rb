@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-	has_many :allotments
+  has_many :allotments
 end
