@@ -1,0 +1,20 @@
+<%= form_for(room) do |f| %>
+  <p>
+    <b>room number</b><br>
+    <%= f.text_field :number %>
+  </p>
+
+  <p>
+    <b>room rate</b><br>
+    <%= f.text_field :price %>
+  </p>
+
+<p>
+    <b>type</b><br>
+    <%= f.select :room_type, ["High","Mid" ,"Low"] %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

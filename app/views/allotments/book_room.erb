@@ -1,0 +1,16 @@
+<h1>Book Room</h1>
+<%= form_for @allotment, :url => { :action => "create_allot" } do |f| %>
+  <p>
+    <b>Check in</b><br>
+    <%= f.datetime_select :checkin %>
+  </p>
+<p>
+    <b>Check out</b><br>
+    <%= f.datetime_select :checkout %>
+  </p>
+
+
+
+    <%= f.submit %>
+  </p>
+<% end %>
