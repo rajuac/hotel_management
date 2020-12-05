@@ -7,7 +7,6 @@
       <th>Price</th>
       <th>Type</th>
       <th>Status</th>
-      <th>Action</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +18,7 @@
         <td><%= room.price %></td>
         <td><%= room.room_type %></td>
         <td><%= room.room_status %></td>
-        <td><%= book_link%></td>
+        <td><%= book_link(room)%></td>
         <td><%= link_to "Edit", edit_room_path(room) %></td>
         <td><%= link_to "Destroy", room, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
