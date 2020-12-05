@@ -32,7 +32,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
 
     respond_to do |format|
-      if @room.update_attributes(room_params)
+      if @room.update!(room_params)
         format.html { redirect_to(rooms_url(notice: 'Room was successfully updated.')) }
         format.xml  { head :ok }
       else

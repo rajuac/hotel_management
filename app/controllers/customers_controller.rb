@@ -32,7 +32,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     respond_to do |format|
-      if @customer.update_attributes(room_params)
+      if @customer.update!(room_params)
         format.html { redirect_to(customers_url(notice: 'Customer was successfully updated.')) }
         format.xml  { head :ok }
       else

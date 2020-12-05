@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :aadhar_no
       t.string :type
       t.string :username
-      t.string :password 	
+      t.string :password
 
       t.timestamps
     end

@@ -1,5 +1,7 @@
 class Room < ApplicationRecord
-  has_one :allotment
+  has_many :allotments
+  has_one :active_allotment, -> { where status: 'booked' }, class_name: "Room"
+
   scope :available, lambda {
                       where(status: [nil, ''])
                     }

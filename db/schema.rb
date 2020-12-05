@@ -10,44 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_172944) do
-
+ActiveRecord::Schema.define(version: 20_201_203_172_944) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-
-
-  create_table "allotments", force: :cascade do |t|
-    t.string "user_id"
-    t.string "room_id"
-    t.datetime "checkin"
-    t.datetime "checkout"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'allotments', force: :cascade do |t|
+    t.string 'user_id'
+    t.string 'room_id'
+    t.datetime 'checkin'
+    t.datetime 'checkout'
+    t.string 'status'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-
-  create_table "rooms", force: :cascade do |t|
-    t.string "number"
-    t.string "room_type"
-    t.integer "price"
-    t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'rooms', force: :cascade do |t|
+    t.string 'number'
+    t.string 'room_type'
+    t.integer 'price'
+    t.string 'status'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_no"
-    t.integer "age"
-    t.string "aadhar_no"
-    t.string "type"
-    t.string "username"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'phone_no'
+    t.integer 'age'
+    t.string 'aadhar_no'
+    t.string 'type'
+    t.string 'username'
+    t.string 'password'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
