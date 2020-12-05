@@ -18,7 +18,6 @@
         <td><%= room.price %></td>
         <td><%= room.room_type %></td>
         <td><%= room.room_status %></td>
-        <td><%= book_link(room)%></td>
         <td><%= link_to "Edit", edit_room_path(room) %></td>
         <td><%= link_to "Destroy", room, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>

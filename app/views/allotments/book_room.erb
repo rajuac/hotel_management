@@ -1,5 +1,20 @@
 <h1>Book Room</h1>
+<% if @allotment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@allotment.errors.count, "error") %> prohibited this room from being booked:</h2>
+
+      <ul>
+      <% @allotment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <%= form_for @allotment, :url => { :action => "create_allot" } do |f| %>
+<%= f.hidden_field :user_id, value: @user.id%>
+<%= f.hidden_field :room_id, value: @room.id %>
+<%= f.hidden_field :status, value: "booked" %>
+
   <p>
     <b>Check in</b><br>
     <%= f.datetime_select :checkin %>

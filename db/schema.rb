@@ -14,6 +14,19 @@ ActiveRecord::Schema.define(version: 20_201_203_172_944) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'phone_no'
+    t.integer 'age'
+    t.string 'aadhar_no'
+    t.string 'type'
+    t.string 'username'
+    t.string 'password'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
+
   create_table 'allotments', force: :cascade do |t|
     t.string 'user_id'
     t.string 'room_id'
@@ -28,20 +41,7 @@ ActiveRecord::Schema.define(version: 20_201_203_172_944) do
     t.string 'number'
     t.string 'room_type'
     t.integer 'price'
-    t.string 'status'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-  end
-
-  create_table 'users', force: :cascade do |t|
-    t.string 'name'
-    t.string 'email'
-    t.string 'phone_no'
-    t.integer 'age'
-    t.string 'aadhar_no'
-    t.string 'type'
-    t.string 'username'
-    t.string 'password'
+    t.boolean 'is_booked', default: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end

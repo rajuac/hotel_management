@@ -4,7 +4,7 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.string :number
       t.string :room_type
       t.integer :price
-      t.string :status
+      t.boolean :is_booked, default: false
 
       t.timestamps
     end

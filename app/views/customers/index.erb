@@ -24,8 +24,7 @@
         <td><%= c.aadhar_no %></td>
          <td><%= c.email %></td>
          <td><%= c.age %></td>
-         <td><%= link_to "Book room", available_rooms_path
-%></td>
+         <td><%= link_to "Book room", available_rooms_path(:user_id=>c.id)%></td>
         <td><%= link_to "Edit", edit_customer_path(c) %></td>
         <td><%= link_to "Destroy", c, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
