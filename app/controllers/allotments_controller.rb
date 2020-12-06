@@ -41,6 +41,6 @@ class AllotmentsController < ApplicationController
   private
 
   def allot_params
-    params.require(:allotment).permit(:checkin, :checkout, :user_id, :room_id,:status)
+    params.require(:allotment).permit(:checkin, :checkout, :user_id, :room_id, :status)
   end
 end

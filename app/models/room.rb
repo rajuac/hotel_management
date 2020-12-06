@@ -8,7 +8,6 @@ class Room < ApplicationRecord
   validates :number, uniqueness: true
   validates_presence_of :price
 
-
   def room_status
     is_booked ? 'Booked' : 'Available'
   end

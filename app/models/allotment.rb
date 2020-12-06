@@ -14,9 +14,9 @@ class Allotment < ApplicationRecord
 
   def future_checkout_time
     if checkin.present? && checkout.present? &&
-        checkout <= checkin
-        errors.add(:checkout, 'must be a valid time after your check in ' \
-        'time.')
+       checkout <= checkin
+      errors.add(:checkout, 'must be a valid time after your check in ' \
+      'time.')
     end
   end
 end
